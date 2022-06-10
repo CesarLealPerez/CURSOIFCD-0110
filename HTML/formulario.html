@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Formulario Html</h1>  <!-- ↓ tipos de input con varios atributos, los nombres son bastante descriptivos-->
+    <h2>Introduce los datos</h2>
+    <form action="">  <!-- ↓ action es la direccion donde se va a enviar el formulario -->
+      <ul>  <!-- ↓ listas desordenadas y dentro de cada elemento de la lista otro tipo de dato-->
+        <li><label for="nombre">Escribe aquí tu nombre</label><br /></li>
+        <li>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre"
+          /><br /><br />
+        </li>
+      </ul>
+      <ul>
+        <li><label for="apellido">Escribe aquí tu apellido</label><br /></li>
+        <li>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Apellido"
+          /><br /><br />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <label for="email">Introduce aquí tu email</label><br />
+          <cite><span style="color: red">*Campo obligatorio</span></cite
+          ><br />
+        </li>
+        <!--es simplemente para destacar que el campo de abajo es required-->
+        <li>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          /><br /><br />
+        </li>
+      </ul>
+      <ul>
+        <li><label for="edad">Edad</label><br /></li>
+        <li>
+          <input
+            type="number"
+            name="edad"
+            id="edad"
+            min="1"
+            max="99"
+            placeholder="Edad"
+            required
+          /><br /><br />
+        </li>
+      </ul>
+      <ul>
+        <li><label for="telefono">Teléfono</label><br /></li>
+        <li>
+          <input
+            title="teléfono"
+            name="teléfono"
+            id="telefono"
+            placeholder="Teléfono"
+            required
+          /><br /><br />
+        </li>
+      </ul>
+      <ul>
+        <li><label for="fecha">Fecha de Nacimiento</label><br /></li>
+        <li>
+          <input type="date" name="fecha" id="fecha" required /><br /><br />
+        </li>
+      </ul>
+      <input type="submit" name="enviar" id="eviar" value="Enviar" /><br><br>
+      <label for="buscar">Busca</label>
+      <input type="search" name="buscar" id="buscar">
+    </form>
+  </body>
+</html>

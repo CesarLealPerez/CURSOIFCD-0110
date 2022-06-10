@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Image Maps</h2> <!-- ← Este es el titulo de la pagina -->
+<p>Click en el ojo del loro:</p>  <!-- Aqui vamos a delimitar con el area una zona de la imagen que puede ejecutar una accion, en este caso un enlace a otra pagina -->
+
+<img src="multimedia/img/loro.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">  <!-- ↓ Este es el mapa de la imagen -->
+  <area shape="circle" coords="85,184,50" alt="parrot" href="https://www.parrot.com"> <!-- ← Este es el area del mapa, el area es una zona de la imagen que puede ejecutar una accion, en este caso un enlace a otra pagina -->
+  <area shape="circle" coords="310,46,50" alt="parrot" href="https://www.parrot.com"> <!-- los atributos definen la forma del area(shape), la localizacion DENTRO de la imagen y a donde lleva o que hace -->
+  </map>
+
+</body>
+</html>
