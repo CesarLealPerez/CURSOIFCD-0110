@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 13/06/2022</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="nav"><nav>
+        <button><a href="index.html">Inicio</a></button>
+        <button><a href="contacto.html">Contacto</a></button>
+        <button><a href="oferta.html">Oferta</a></button>
+      </nav></div>
+      <div id="fondo"><img src="img/orgullo.jpg" alt=""></div>
+      <div id="datos">
+        <div id="titulo"><h1>Cubre el formulario</h1></div>
+        <form id="form" action="contacto.html" method="post">
+            <div id="nombre">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            </div>
+            <div id="apellidos"> 
+            <label for="apellidos">Apellidos:</label> 
+            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+            </div>
+            <div id="email">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div id="submit">
+            <input type="submit" value="Enviar">
+            </div>
+        </form>
+      </div>
+  </body>
+</html>
