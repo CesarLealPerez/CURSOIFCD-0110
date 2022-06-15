@@ -1,6 +1,14 @@
 body {
   min-height: 100vh;
-   margin: 0 auto;
+  margin: 0 auto;
+}
+
+#nav {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+  z-index: 1;
 }
 #fondo {
   position: absolute;
@@ -9,12 +17,11 @@ body {
   margin: 0%;
   z-index: 0;
 }
-#nav {
+#datos {
   position: absolute;
-  text-align: center;
   width: 100%;
-  margin-top: 2%;
-  z-index: 1;
+  z-index: 3;
+  min-height: fit-content;
 }
 #titulo {
   width: 100%;
@@ -23,12 +30,6 @@ body {
   position: absolute;
   text-align: center;
   margin-top: 30vh;
-}
-#datos {
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-  min-height: fit-content;
 }
 #form {
   color: white;
@@ -39,9 +40,8 @@ body {
   max-width: 60%;
   z-index: 4;
 }
-label {
-  text-align: left;
-  display: inline-block;
+input[text]{
+  float: left;
 }
 #nombre {
   border: 2px solid rgb(250, 250, 250);
