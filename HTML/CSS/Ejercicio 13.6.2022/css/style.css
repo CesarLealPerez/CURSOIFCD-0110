@@ -49,6 +49,9 @@ label {
   box-shadow: 2px 2px 1px #000;
   min-width: fit-content;
 }
+#txbnombre{
+  padding-left: 80%;
+}
 #apellidos {
   border: 2px solid rgb(250, 250, 250);
   margin: 10px;
