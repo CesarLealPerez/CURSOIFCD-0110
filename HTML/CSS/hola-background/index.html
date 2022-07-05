@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FavIcon el que se ve en la pestaña del navegador -->
+    <link rel="icon" href="img/promotv144.png">
     <title>Hola Background</title>
-    <link rel="stylesheet" href="/CSS/hola-background/css/index.css" />
-  </head>
-  <body>
-    <!--Vamos a vincular una hoja de estilos externa y vamos a crear una pagina
-    con un fondo de imagen que cubre toda la pagina y un titulo cabecera h1 centrado encima de la
-    imagen-->
-    <div id="fondo"></div>
-    <h2 class="titulo2 fondo-blanco">Este es un subtitulo<br />con un salto de linea</h2>
-    <h1 class="titulo fondo-blanco">Hola este es un fondo Responsive</h1>
-  </body>
+    <!--Agregamos nuestro CSS-->
+    <!--Puede haber mas de un enlace a mas de una stylesheet, eso si, los nombres tienen que ser distintos.
+    Esto se hace porque podemos importar librerías como jquery o similares.-->
+    <link href="css/index.css" rel="stylesheet" />
+     <!--Agregamos Font Awesome desde un CDN. También se puede hacer por @import en CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header. esto se insertará dinámicamente con Javascript.
+    Se realiza asi porque es una manera de que la pagina interactúe desde el navegador con el servidor.
+    Una vez enviada la información al navegador el servidor se desentiende como un padre que fue a por tabaco...
+    En PHP la alternativa es el "maldito" ajax, que aun no conseguí que funcione bien.-->
+    <header>
+        <!--Etiqueta semántica para añadir un menú de navegación de la página -->
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"> </i> Inicio
+            </a>    <!--Esto de aqui  añade-->
+            <a href="contacto.html">
+                Contacto
+            </a>
+            <a href="oferta.html">
+                Oferta
+            </a>
+            <a href="alineamiento.html">
+                Alineamiento v y h
+            </a>
+        </nav>
+    </header>
+    <div class="background">
+        <!--
+        Aquí va un fondo en el div que está en posición absoluta. 
+        Le damos aquí los estilos para que quede responsive bien.
+    -->
+    </div>
+    <!-- Subtítulo y título en posición relativa-->
+    <h2>Tu mundo está aquí</h2>
+    <h1>AMESZON</h1>
+</body>
+
 </html>
