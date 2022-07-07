@@ -1,165 +1,215 @@
-
-/*  
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+/* ↑ ↓ importacion de las fuentes desde google y font-awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
-body{
+
+body {
   font-family: Arial, Helvetica, sans-serif;
+  /* fuente del body, determinamos que sean Arial, Helvetica y que no tengan serifa */
 }
+
 .background {
-    background-image: url("../img/orgullo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    top:0;
-    left:0;
-    height:100vh;
+  /* clase para el background, aplica a cualquier clase background */
+  background-image: url("../img/orgullo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  /* para que se quede encima de todo */
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
 
 }
-h1, h2{
+
+
+h2 {
+  margin-top: 30vh;
+  /* para que el h2 se quede en el medio */
+}
+
+h1,h2 { /* ← aplicamos a todos los h1 y h2 los estilos, ↑ este otro solo aplica al h2 y nos evitamos duplicar */
   font-family: 'Oswald';
-}
-h2{
-  margin-top:30vh;
-}
-
-h1, h2 {
-     color: white;
-     text-shadow: 2px 2px 2px black;
-     text-align: center;
-     width:100%;
-     transition: 2s
- }
- 
- a, li{
-   width:5%;
-   padding:10px;
-   border:1px solid white;
-   box-shadow: 2px 2px 1px black;
-   position:relative;
-   color:white;
-   background-color: rgba(134, 81, 202, 0.3);
-   margin:5px;
-   text-decoration: none;
-   
- }
-
- a:active{
-  color:rgb(81, 202, 202);
-}
-a:visited{
-  color:rgb(81, 202, 202);
-}
- nav{
-  margin-top:30px;
-  margin-left:30px;
+  /* ↑ fuente de los titulos, determinamos que sean oswald, originalmente estaba en otro pero como aplica a lo mismo lo paso aqui */
+  color: white;
+  text-shadow: 2px 2px 2px black;
   text-align: center;
- }
-li{
-   list-style: none;
-   height: 5vh;
-   min-height: 80px;
-   overflow: hidden;
-   width:20%;
-   min-width: 180px;
-   display: inline-block;
- }
- input{
-   padding: 10px;
-   float: right;
- }
- ul{
-   width:90%;
-   position: absolute;
-   z-index: 1;
-   bottom:10px;
-   left:5px;
- }
+  width: 100%;
+  transition: 2s
+}
 
- #oferta{
+a,li { /* ← aplicamos a todos los a y li los estilos*/
+  width: 5%;  /* ← le damos un tamaño del 5% a cada uno de los recuadros */
+  padding: 10px; /* ← le damos un padding para que no quede pegado al inicio del cuadro */
+  border: 1px solid white;
+  box-shadow: 2px 2px 1px black;  /* ← le damos una sombra a cada uno de los recuadros para que se distingan bien del fondo */
+  position: relative;
+  color: white;
+  background-color: rgba(134, 81, 202, 0.3); /* ← le damos un color de fondo a cada uno de los recuadros y una transparencia para que se vea bien el fondo pero que quede integrado en el conjunto*/
+  margin: 5px;
+  text-decoration: none;
+
+}
+
+/* ↓ desde aqui le aplicamos los estilos a la barra de navegacion, le determino que los links visitados se queden en rojo y los activos en verde turquesa para que crezcan manteniendo el color al pasar*/
+a:active {
+  color: rgb(81, 202, 202);
+}
+
+a:visited {
+  color: rgb(202, 81, 97);
+}
+
+nav {
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: center;
+}
+/* ↑ El estilo a la barra de navegacion es hasta aqui*/
+
+li {  /* ← aplicamos a todos los li los estilos, si hay exceso de texto lo oculta, 
+  limita la altura al 5% de la pantalla visible, le da un valor minimo de altura y ancho para que no se oculten trozos.
+  Muestra los elementos de la lista en linea pero como bloques. Al hacerlo asi si no entra entero en la pantalla lo 
+  cambia a la linea siguiente*/
+  list-style: none;
+  height: 5vh;
+  min-height: 80px;
+  overflow: hidden;
+  width: 20%;
+  min-width: 180px;
+  display: inline-block;
+}
+
+input { /* ← aplicamos a todos los input los estilos y le damos un padding de 10px */
+  padding: 10px;
+  float: right;
+}
+
+ul {  /* ← aplicamos a todos los ul los estilos les damos una posicion absoluta para que no se muevan del lugar al variar otros elementos*/
+  width: 90%;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 5px;
+}
+
+#oferta { /* ← aplicamos a id oferta el cambio de la imagen de fondo */
   background-image: url("../img/pizza.jpg");
- }
- .oferta{
-  margin-left:45%;
+}
+
+.oferta { /* ← aplicamos a clase oferta el estilo. Aunque se llamen igual al id no se les aplica lo mismo 
+  porque uno es una id unica y esto se aplica a la class que son mas de un elemento.*/
+  margin-left: 45%;
   width: 50%;
   text-align: right;
-  margin-right:5%;
+  margin-right: 5%;
   font-size: 100px;
   transition: none;
- }
- h2.oferta{
+}
+
+h2.oferta {
   font-size: 60px;
-  margin-bottom: -25px
- }
- iframe{
-   float:left
- }
- .imagen_centrada{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    width: 50vw;
-    border: 3px solid palevioletred; 
-    margin:25vh 25vw 50px 25vw;
- }
- .imagen_centrada img{
-   height: 25vh;
- }
- /*--  FORMULARIO --- */
- input[type='checkbox']{
+  margin-bottom: -25px; /* ← para que el h2 se pegue mas a la otra linea */ 
+}
+
+iframe {
+  float: left
+}
+
+.imagen_centrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  border: 3px solid palevioletred;
+  margin: 25vh 25vw 50px 25vw;
+}
+
+.imagen_centrada img {
+  height: 25vh;
+}
+
+/*--  FORMULARIO --- */
+input[type='checkbox'] {  /* ← aplicamos a todos los input de tipo checkbox que al empezar todos esten en blanco */
   clear: both;
- }
-header{
-  position:fixed;
-  top:0px;
-  left:0px;
+}
+
+header {
+  position: fixed; /* ← para que se quede fijo en la parte superior sin importar la forma de la pagina */
+  top: 0px;
+  left: 0px;
   z-index: 4;
   text-align: center;
-  width:100%
+  width: 100%
 }
-.required{
-  color:red
+
+.required {
+  color: red
 }
- /*Fin formulario*/
 
- /*-------TRANSICIONES----------*/
+/*Fin formulario*/
 
- a {
+/*-------TRANSICIONES----------*/
 
-  transition:font-size 0.5s ease-in-out; /* Animation */
+a {
 
- }
-a:hover{
+  transition: font-size 0.5s ease-in-out;
+  /* Animation */
+
+}
+
+a:hover {
   overflow: hidden;
-  font-size:20px
-
- }
-
- /*------ ANIMACIONES -----*/
- /*el código de la animación*/
- @keyframes h1anim {
-  0%   {margin-left:0;}
-  15%  {margin-left:5vh;}
-  30%  {margin-left:10vh;}
-  45%  {margin-left:15vh;}
-  60%  {margin-left:30vh;}
-  75%  {margin-left:35vh;}
-  90%  {margin-left:40vh;}
-  100% {margin-left:45vh;}
+  font-size: 20px
 }
+
+/*------ ANIMACIONES -----*/
+/*el código de la animación*/
+@keyframes h1anim { /* ← creamos una animación para el h1, los keyframes, fotogramas clave en español, determinan como se va a realizar la animacion. En principio cuantos mas se usen mas fluido deberia ser el movimiento y podria ser mas complejo. Por contra cuanto mas complejo sea mas recursos pedira y mas posibilidades de saltos o retrasos en la carga puede haber. */
+  0% {
+    margin-left: 0;
+  }
+
+  15% {
+    margin-left: 5vh;
+  }
+
+  30% {
+    margin-left: 10vh;
+  }
+
+  45% {
+    margin-left: 15vh;
+  }
+
+  60% {
+    margin-left: 30vh;
+  }
+
+  75% {
+    margin-left: 35vh;
+  }
+
+  90% {
+    margin-left: 40vh;
+  }
+
+  100% {
+    margin-left: 45vh;
+  }
+}
+
 /*se aplica la animación*/
-.oferta{
+.oferta {
   animation-name: h1anim;
-  animation-duration: 0.5s;
+  animation-duration: 0.5s; /* ← duración de la animación, normalmente se determina en milisegundos */
   animation-timing-function: linear;
 }
-h2.oferta{
+
+h2.oferta {
   animation-duration: 0.75s;
 }
- /*------FIN ANIMACIONES -------*/
+
+/*------FIN ANIMACIONES -------*/
