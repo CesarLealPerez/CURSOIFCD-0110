@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -31,43 +31,49 @@
         Background igual que el de index     
         -->
     </div>
-<!--Empieza el formulario-->
-    <form target="_self" name="form" id="form">
+    <li id="datosUsuario">Datos del Usuario:</li>
+    <!--Empieza el formulario-->
+    <form target="_self" name="form" id="form" action="../hola-background-luis-comentado/formulario.php" method="post" >
+    <!--<form target="_self" name="form" id="form"> Esto es la version para que funcione todo con html, lo de arriba es un enlace al php que va a hacer lo mismo. Al hacerlo con php se comenta el script para no usarlo.-->
         <!-- Estamos usando lista desordenada para los campos de formulario
         Es también habitual hacerlo con los elementos de los menús de navegación
         -->
         <ul>
-             <!-- 
+            <!-- 
                 H1 y H2 aquí van dentro de la etqueta UL para que no se solape con los campos,
                 ya que este UL está en posición absoluta
              -->
             <h2>Envíanos tus datos</h2>
             <h1>Cubre el formulario</h1>
-             <!-- 
+            <!-- 
                 Empiezan los campos de formulario
              -->
+            <!--Desde aqui se usan diferentes tipos de input-->
             <li>
                 <!-- Campo obligatorio tipo texto-->
-                <label for="nombre"><span class="required">*</span> Tu nombre</label><br>
+                <label for="nombre"><span class="required">*</span> Tu nombre</label></br>
                 <input type="text" name="nombre" required>
+                <!--required=Campo obligatorio, si no se cubre no deja enviar el formulario y queda destacado-->
 
             </li>
             <li>
                 <!-- Campo tipo numérico-->
-                <label for="nombre">Tu edad</label><br>
+                <label for="nombre">Tu edad</label></br>
                 <input type="number" name="edad">
 
             </li>
             <li>
                 <!-- Campo obligatorio tipo Email-->
-                <label for="email"><span class="required">*</span> Email</label><br>
-                <input type="email" name="email" id="email"  required>
+                <label for="email"><span class="required">*</span> Email</label></br>
+                <input type="email" name="email" id="email" required>
+                <!--El tipo email determina que lo que se escriba tiene que tener "formato" de email. En la practica simplemente tiene que tener una @-->
 
             </li>
             <li>
                 <!-- Campo tipo Tel (teléfono)-->
-                Teléfono <br>(formato xxx yyy zzz):<br>
-               <input type="tel" pattern="+[0-9]{2} [0-9]{9}">
+                <label for="Teléfono" >Teléfono</label> </br>(formato xxx yyy zzz):</br>
+                <input type="tel" name="Teléfono" id="tel">
+                <!--El tipo tel determina que lo que se escriba tiene que tener "formato" de teléfono. Al final de la etiqueta a veces lleva una expresion regular tipo  pattern="+[0-9]{2} [0-9]{9}" que en este caso esta mal pero que se usa para que reconozca detalles particulares de los telefonos como el prefijo internacional.-->
             </li>
             <li>
                 <!-- inputs tipo Radio-button Llevan el mismo nombre 
@@ -77,24 +83,23 @@
                 <span class="required">*</span> ¿Cómo vendrás al centro?
                 <hr>
                 <input type="radio" id="vehiculo" name="comoviene" value="vehiculo" required>
-                <label for="vehiculo">Tengo vehículo</label><br>
+                <label for="vehiculo">Tengo vehículo</label></br>
                 <input type="radio" id="andando" name="comoviene" value="andando">
                 <label for="andando">Voy andando</label>
             </li>
             <li>
-                <!-- inputs tipo checkbox. Cada uno es un campo.
-                -->
-                ¿ Qué vehículos tienes ?<br>
+                <!-- inputs tipo checkbox. Cada uno es un campo. -->
+                <!--A diferencia de los type radio los checkbox son independientes y pueden marcarse mas de uno a la vez-->
+                ¿ Qué vehículos tienes ?</br>
                 <input type="checkbox" id="coche" name="tipo" value="coche">
-                <label for="coche">Tengo coche</label><br>
+                <label for="coche">Tengo coche</label></br>
                 <input type="checkbox" id="moto" name="moto" value="moto">
-                <label for="moto">Tengo moto </label><br>
+                <label for="moto">Tengo moto </label></br>
                 <input type="checkbox" id="barco" name="barco" value="barco">
                 <label for="barco">Tengo barco</label>
             </li>
             <li>
-                 <!-- Campo tipo select, que crea un menú desplegable con las ociones
-                -->
+                <!-- Campo tipo select, que crea un menú desplegable con las ociones -->
                 ¿Qué curso quieres?
                 <label for="curso">Elige uno</label>
 
@@ -102,13 +107,12 @@
                     <option value="">Elige uno...</option>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
-                     <!-- Este sería el valor seleccionado por defecto
-                -->
+                    <!-- Este sería el valor seleccionado por defecto -->
                     <option value="JS" selected>JAVASCRIPT</option>
                 </select>
             </li>
             <li>
-                 <!-- Botón de enviar.
+                <!-- Botón de enviar.
                     Es un input pero no envía valores, 
                     aunque tiene un value que es el texto que se ve en el botón,  
                     y por defecto (si no se pone) es "submit".
@@ -118,6 +122,30 @@
             </li>
         </ul>
     </form>
+    <!-- Desde aqui se comenta el sript para que no se ejecute y se llame al PHP-->
+    
+    <!--A partir de aqui vamos a insertar javascript para modificar los funcionamientos de la pagina-->
+    <!--<script>
+        let formulario = document.getElementById("form");
+        let datosUsuario = document.getElementById("datosUsuario");
+        formulario.onsubmit = function (e) {
+            e.preventDefault(); /*Esto evita que el evento se lance si puede. No funciona en todos los casos, hay eventos que no se pueden parar.*/
+            let datos = 'Datos del Usuario: </br>';
+            datos += 'Nombre: ' + formulario.elements.nombre.value + '</br>';
+            datos += '</br> Edad: ' + formulario.elements.edad.value + '</br>';
+            datos += '</br> Email: ' + formulario.elements.email.value + '</br>';
+            datos += '</br>Teléfono: ' + formulario.elements.tel.value + '</br>';
+            datos += '</br> ¿Cómo vendrás al centro? ' + formulario.elements.vehiculo.value || 'No tiene vehiculo'+ '</br>';
+            datos += '</br> ¿Qué vehículos tienes? ' + formulario.elements.coche.value || 'No tiene coche'+ '</br>';
+            datos += '</br> ¿Qué vehículos tienes? ' + formulario.elements.moto.value|| 'No tiene moto' + '</br>';
+            datos += '</br> ¿Qué vehículos tienes? ' + formulario.elements.barco.value || 'No tiene barco'+ '</br>';
+            datos += '</br> ¿Qué curso quieres? ' + formulario.elements.curso.value + '</br>';
+
+            datosUsuario.innerHTML = datos;
+            alert(formulario.elements.nombre.value);
+        }
+    </script>
+    -->
 </body>
 
 </html>
