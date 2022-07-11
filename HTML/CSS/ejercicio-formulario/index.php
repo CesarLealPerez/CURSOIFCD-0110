@@ -14,14 +14,23 @@
     <?php if (isset($_POST['nombre'])) { ?>
         <!-- HTML -->
         <ul>
-            <il>Nombre: <?php echo $_POST['nombre']; ?><br></il>
-            <il>Edad: <?php echo $_POST['edad']; ?><br></il>
-            <il>Sexo: <?php echo $_POST['sexo']; ?><br></il>
-            <il>Email: <?php echo $_POST['email']; ?><br></il>
-            <il>Pais: <?php echo $_POST['pais']; ?><br></il>
-            <il>Profesion: <?php echo $_POST['profesion']; ?><br></il>
-            <il>Intereses: <?php echo $_POST['intereses']; ?><br></il>
-            <il>Comentarios: <?php echo $_POST['comentarios']; ?><br></il>
+            <li>Nombre: <?php echo $_POST['nombre']; ?><br></li>
+            <li>Edad: <?php echo $_POST['edad']; ?><br></li>
+            <li>Sexo: <?php echo $_POST['sexo']; ?><br></li>
+            <li>Email: <?php echo $_POST['email']; ?><br></li>
+            <li>Ganas: <?php echo $_POST['dinero']; ?><br></li>
+            <li>Te queda: <?php echo $_POST['dinero'] - $_POST['gastos']; ?><br></li>
+            <script>
+                dinerito();
+                function dinerito() {
+                    var dinero = <?php echo $_POST['dinero']; ?>;
+                    var gastos = <?php echo $_POST['gastos']; ?>;
+                    var total = dinero - gastos;
+                if (total < 0) {
+                    alert("Tienes un problema. No tienes dinero para gastar");
+                }   
+                }  // Fin de la función dinerito
+            </script>
         </ul>
         <button onclick="javascript:history.back()">Volver sin limpiar</button> <!-- Volver a la página anterior pero sin limpiar los datos-->
         <!-- otra opcion del boton volver pero limpiando los datos -->
@@ -40,17 +49,16 @@
             <input type="number" name="edad" id="edad"><br>
             <label for="sexo">Sexo:</label>
             <input type="radio" name="sexo" value="Hombre">Hombre
-            <input type="radio" name="sexo" value="Mujer">Mujer<br>
+            <input type="radio" name="sexo" value="Mujer">Mujer
+            <input type="radio" name="sexo" value="None">No lo quiero decir<br>
             <label for="email">Email:</label>
             <input type="email" name="email" id="email"><br>
-            <label for="pais">Pais:</label>
-            <input type="text" name="pais" id="pais"><br>
-            <label for="profesion">Profesion:</label>
-            <input type="text" name="profesion" id="profesion"><br>
-            <label for="intereses">Intereses:</label>
-            <input type="text" name="intereses" id="intereses"><br>
-            <label for="comentarios">Comentarios:</label>
-            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br>
+            <label for="dinero">Cuanto ganas:</label>
+            <input name="dinero" type="number">
+            <label for="gastos">Cuantos gastas:</label>
+            <input name="gastos" type="number"><br>
+
+
             <input type="submit" value="Enviar">
     <?php } ?>
 
