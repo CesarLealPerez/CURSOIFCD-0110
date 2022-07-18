@@ -94,6 +94,12 @@ ul {  /* ← aplicamos a todos los ul los estilos les damos una posicion absolut
   left: 5px;
 }
 
+#datosUsuario{
+margin-left: 3%;
+height: 250px;
+width: 30%;
+}
+
 #oferta { /* ← aplicamos a id oferta el cambio de la imagen de fondo */
   background-image: url("../img/pizza.jpg");
 }
