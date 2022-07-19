@@ -1,26 +1,44 @@
-body{
+body {
     background-image: url("img/orgullo.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
-nav{
-    display: flex;
-    align-items: center;
+
+nav {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
-h1{
+
+footer {
+    min-height: 4em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 2%;
+}
+
+h1 {
     color: white;
     text-align: center;
     font-size: 50px;
     font-family: "Times New Roman", Times, serif;
 }
-label{
+
+label {
     color: white;
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
 }
-iframe{
+
+iframe {
     position: relative;
-    padding-left: 33%;
+    padding-left: 33vw;
+    width: 33vw;
 }
