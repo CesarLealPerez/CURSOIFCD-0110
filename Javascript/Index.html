@@ -22,6 +22,7 @@
     <h1>Esto es la pagina de Inicio</h1>
     <!--A partir de aqui es el HOLA MUNDO de JS-->
     <div id="main"></div>
+    <div id="main2"></div>
     <script>
         //las comillas pueden ser dobles o simples de manera indistinta. Para mi, personalmente, las comillas dobles son mas habituales al inicio y las simples mas al interior. Eso si, al abrir comillas dobles en el interior se usan comillas simples, y viceversa.
         alert("Hola, esta es el alert"); //Muestra una alerta cuando se carga la pagina. Este es el unico comando que para javascript.
@@ -36,6 +37,11 @@
             jsSalida = numero + numero2;
             document.getElementById("main").innerHTML = jsSalida;
         }        
+        let n=0;
+        for(let i=0; i<100; i++){
+            n+=i;               //a cada vuelta le suma el valor actual de i a n.
+        }
+        document.getElementById("main2").innerHTML = n;
     </script>
     <footer>
         <h3>&#169 Esto es un footer hecho por Cesar ;)</h3>
