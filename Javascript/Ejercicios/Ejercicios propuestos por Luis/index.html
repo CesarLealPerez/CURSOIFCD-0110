@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Turno</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="scripts.js"></script>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Para usar jquery desde google, buscar jquery hosted y esto sale en el primer resultado -->
+</head>
+
+<body>
+
+    <div id="turno">
+
+        <h1>Turno Actual</h1>
+        <p id="numero">00</p>
+
+    </div>
+
+    <div id="cargador">
+
+        <span class="loader" id="loader"></span> <!-- Esta clase es para que el loader se vea si hace falta-->
+    
+    </div>
+    
+    <div id="botones">
+
+        <button id="restar" class="btn btn-danger" onclick="resta()">Restar Turno</button>
+        <button id="sumar" class="btn btn-success" onclick="suma()">Sumar Turno</button>
+    
+    </div>
+    
+
+</body>
+
+</html>

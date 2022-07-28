@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Play:400,700');
+
+body {
+    background: linear-gradient(220.55deg, #8A88FB 0%, #D079EE 100%);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#turno {
+    text-align: center;
+    font-size: 300px;
+    font-family: 'Play', sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+#botones {
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
