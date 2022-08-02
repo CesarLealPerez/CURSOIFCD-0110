@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18-7-22</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+        <button><a href="Index.html">Inicio</a></button>
+        <button><a href="Contacto.html">Contacto</a></button>
+        <button><a href="Video.html">Video</a></button>
+        </nav>
+    </header>
+
+    <h1>Esto es la pagina de Contacto</h1>
+
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br>
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+
+        <label for="mail">E-Mail</label><br>
+        <input type="email" name="mail" id="mail"><br><br>
+
+        <div onclick="opciones()">
+            <label for="options">Marca las opciones que quieras:</label><br>
+            <input type="checkbox" class="options" name="opcion1" id="html"> <label class="options"
+                for="html">HTML</label>
+            <input type="checkbox" class="options" name="opcion2" id="javascript"> <label class="options"
+                for="javascript">Javascript</label>
+            <input type="checkbox" class="options" name="opcion3" id="php"> <label class="options" for="php">Php</label>
+            <input type="checkbox" class="options" name="opcion4" id="Todas"> <label class="options"
+                for="Todas">Todas<span style="color: red; font-weight:bolder">(ME GUSTAN LOS PROBLEMAS)</span></label>
+        </div>
+
+        <div id="envio">
+            <input type="checkbox" id="checkbox" value="Todos los datos son correctos" onclick="checkboxControl()">
+            <label for="checkbox">Todos los datos son correctos</label><br><br>
+            <input type="submit" id="submit" name="submit" value="Enviar" disabled="true">
+        </div>
+
+    </form>
+
+    <script>
+
+        function checkboxControl() {
+            if (document.getElementById("checkbox").checked) {
+                document.getElementById("submit").disabled = false;
+            } else {
+                document.getElementById("submit").disabled = true;
+            }
+        }
+
+        function opciones() {
+
+            if (document.getElementById("Todas").checked) {
+
+                document.getElementById("html").checked = true;
+                document.getElementById("javascript").checked = true;
+                document.getElementById("php").checked = true;
+                alert("Has seleccionado todas las opciones");
+
+            }
+        }
+
+    </script>
+
+    <footer>
+        <h3>&#169 Esto es un footer hecho por Cesar ;)</h3>
+    </footer>
+
+</body>
+
+
+</html>
