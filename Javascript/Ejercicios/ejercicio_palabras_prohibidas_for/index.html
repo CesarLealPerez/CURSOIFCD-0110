@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobador de obscenidades</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts.js"></script>
+    
+</head>
+<body>
+    <label>Texto a moderar:     </label>
+    <textarea id="textArea" cols="30" rows="10"></textarea>
+    <div id="obscenidad"></div>
+    <div id="botones">
+        <button id="ok" onclick="comprobarObscenidades()">Verificar texto</button>
+        <button id="no" onclick="verObscenidades()">Ver obscenidades contenidas</button>
+    </div>
+</body>
+</html>
