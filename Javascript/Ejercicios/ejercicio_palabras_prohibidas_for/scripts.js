@@ -7,22 +7,29 @@ document.getElementById('textArea').innerHTML  = texto;
 let obscenidades_texto = [''];
 let textoReemplazado;
 
+function escribe(texto) {
+    document.getElementsByTagName("h1").innerHTML = texto;
+    console.log(texto);
+}
+
+
 function comprobarObscenidades() {
 
-    for (let i = 0; i < obscenidades.length; i++) {
+    for (let obscenidad of obscenidades) {
 
-        textoReemplazado = texto.replace(obscenidades[i], '***')
+        textoReemplazado = texto.replace(obscenidad, '***')
         
         if (texto.toLowerCase() != textoReemplazado) {
-            obscenidades_texto.push(obscenidades[i]);
+            obscenidades_texto.push(obscenidad);
         }
 
         if (obscenidades_texto.length > 0) {
-            escribe(`Este texto contiene ${obscenidades_texto.lenght}`, 'main');
+            escribe(`Este texto contiene ${obscenidades_texto.lenght}`, 'h1>');
         } else {
             escribe('Este texto no contiene obscenidades.')
 
         }
+        document.getElementById('textArea').innerHTML = textoReemplazado;
     }
 }
 
