@@ -15,6 +15,9 @@ function escribe(texto) {
 
 function comprobarObscenidades() {
 
+    obscenidades_texto = [];
+    document.getElementsByTagName("h1").clear;
+
     for (let obscenidad of obscenidades) {
 
         textoReemplazado = texto.replace(obscenidad, '***')

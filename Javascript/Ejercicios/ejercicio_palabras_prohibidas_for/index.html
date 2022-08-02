@@ -10,13 +10,17 @@
 </head>
 <body>
     <label>Texto a moderar:     </label>
-    <textarea id="textArea" cols="30" rows="10"></textarea>
+    <textarea id="textArea" cols="30" rows="10" onchange="texto = value"></textarea>
     <div id="obscenidad"></div>
     <div id="botones">
         <button id="ok" onclick="comprobarObscenidades()">Verificar texto</button>
         <button id="no" onclick="verObscenidades()">Ver obscenidades contenidas</button>
     </div>
+    <div id="final">
+    <h1>Obscenidades contenidas: </h1><br>
+    
     <h1 id="resultado"></h1>
+    </div>
     <script src="scripts.js"></script>
 
 </body>
