@@ -17,6 +17,7 @@ function comprobarObscenidades() {
 
     obscenidades_texto = [];
     document.getElementsByTagName("h1").clear;
+    document.getElementById('resultado').innerHTML = " ";
 
     for (let obscenidad of obscenidades) {
 
@@ -25,17 +26,25 @@ function comprobarObscenidades() {
         if (texto.toLowerCase() != textoReemplazado) {
             obscenidades_texto.push(obscenidad);
         }
-
-        if (obscenidades_texto.length > 0) {
-            escribe(`Este texto contiene ${obscenidades_texto.lenght}`, 'h1>');
-        } else {
-            escribe('Este texto no contiene obscenidades.')
-
-        }
-        document.getElementById('textArea').innerHTML = textoReemplazado;
+        console.log(obscenidades_texto.length);
     }
-}
+    if (obscenidades_texto.length > 0) {
+        escribe(`Este texto contiene ${obscenidades_texto.length} obscenidades`);
+        alert(`Este texto contiene ${obscenidades_texto.length} obscenidades`);
+        console.log(textoReemplazado);
+        console.log(obscenidades_texto);
+
+        
+    } else {
+
+        escribe('Este texto no contiene obscenidades.')
+        alert('Felicidades!!! Este texto es apto para todos los públicos.')
+        document.getElementById('resultado').innerHTML = "0";
+
+    }
+    
+    document.getElementById('textArea').innerHTML  = textoReemplazado;}
 
 function verObscenidades() {
-    document.getElementById('obscenidad').innerHTML = obscenidades_texto;
+    document.getElementById('resultado').innerHTML = obscenidades_texto;
 }
