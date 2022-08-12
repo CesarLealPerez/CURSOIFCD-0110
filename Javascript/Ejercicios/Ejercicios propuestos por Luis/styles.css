@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Play:400,700');
+/*para el contador de turnos*/
+@import url(http://fonts.googleapis.com/css?family=Rampart+One:400);
+@import url(http://fonts.googleapis.com/css?family=Play:400,700);
+@import url(http://fonts.googleapis.com/css?family=Courgette:400);
+/*Rampart One para los nombres de los equipos*/
+/*Play para los marcadores de numeros*/
+/*Courgette para los subtitulos*/
 
+/*contador de turnos*/
 body {
     background: linear-gradient(220.55deg, #8A88FB 0%, #D079EE 100%);
     background-repeat: none;
@@ -8,7 +16,7 @@ body {
 
 #turno {
     text-align: center;
-    font-size: 300px;
+    font-size: 45vh;
     font-family: 'Play', sans-serif;
     position: relative;
     top: 10vh;
@@ -16,6 +24,94 @@ body {
 
 #botones {
     text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+/*para el navbar que creamos en el header*/
+#navegador ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#navegador li {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+#navegador li a {
+    padding: 2px 7px 2px 7px;
+    color: #666;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+#navegador li a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/*marcador de deportes*/
+
+
+.nombre {
+    font-family: 'Rampart One', cursive;
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.marcador {
+    font-family: 'Play', sans-serif;
+    font-size: 60vh;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: auto;
+}
+
+.equipo {
+    text-align: center;
+    display: inline-block;
+    width: 48vw;
+    height: 75vh;
+    border: 3px solid rgb(0, 0, 0);
+    /*position: relative;*/
+    color: white;
+    background-color: rgba(134, 81, 202, 0.3);
+    margin-top: 2vh;
+}
+.equipos{
+    display: flexbox;
+    margin-left: 1.5%;
+}
+
+.sanciones{
+    position: relative;
+    top: -10vh;}
+
+/*cuenta atras para cumpleaños perpetua*/
+#edad {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Play', sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+#contador {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Play', sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+#countdown {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Play', sans-serif;
     position: relative;
     top: 10vh;
 }
