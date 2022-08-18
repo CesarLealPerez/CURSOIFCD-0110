@@ -29,18 +29,19 @@ body {
 }
 
 /*para el navbar que creamos en el header*/
-#navegador ul {
+#header ul {
     list-style-type: none;
     text-align: center;
+    margin-top: 10px;
 }
 
-#navegador li {
+#header li {
     display: inline;
     text-align: center;
     margin: 0 10px 0 0;
 }
 
-#navegador li a {
+#header li a {
     padding: 2px 7px 2px 7px;
     color: #666;
     background-color: #eeeeee;
@@ -48,7 +49,7 @@ body {
     text-decoration: none;
 }
 
-#navegador li a:hover {
+#header li a:hover {
     background-color: #333333;
     color: #ffffff;
 }
@@ -68,7 +69,6 @@ body {
     font-size: 60vh;
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-top: auto;
 }
 
 .equipo {
@@ -111,6 +111,14 @@ body {
 #countdown {
     text-align: center;
     font-size: 2.5em;
+    font-family: 'Play', sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+#footer {
+    text-align: center;
+    font-size: 1.5em;
     font-family: 'Play', sans-serif;
     position: relative;
     top: 10vh;

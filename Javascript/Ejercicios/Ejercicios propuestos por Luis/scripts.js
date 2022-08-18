@@ -1,3 +1,25 @@
+//header y footer
+
+async function insertaHeader(){
+    let header = await fetch('header.html');
+    let html = await header.text();
+
+   document.getElementById('header').innerHTML = html;
+
+}
+
+
+async function insertaFooter(){
+    let footer = await fetch('footer.html');
+    let html = await footer.text();
+
+   document.getElementById('footer').innerHTML = html;
+
+}
+
+window.onload = insertaHeader (); 
+window.onload = insertaFooter ();
+
 //contador de turnos
 var numero = Number(document.getElementById("numero"));
 

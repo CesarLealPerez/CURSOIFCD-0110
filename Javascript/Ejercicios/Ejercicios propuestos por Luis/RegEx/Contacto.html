@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacta con nosotros</title>
+    <title>Ejercicio 18-7-22</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <header>
-        <div id="header"></div>
+        <nav>
+        <button><a href="Index.html">Inicio</a></button>
+        <button><a href="Contacto.html">Contacto</a></button>
+        <button><a href="Video.html">Video</a></button>
+        </nav>
     </header>
-
-    <div>
 
     <h1>Esto es la pagina de Contacto</h1>
 
@@ -26,16 +28,16 @@
         <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
 
         <label for="mail">E-Mail</label><br>
-        <input type="email" name="mail" id="mail" required><br><br>
+        <input type="email" name="mail" id="mail"><br><br>
 
-        <div onclick="opciones()" required>
+        <div onclick="opciones()">
             <label for="options">Marca las opciones que quieras:</label><br>
             <input type="checkbox" class="options" name="opcion1" id="html"> <label class="options"
                 for="html">HTML</label>
             <input type="checkbox" class="options" name="opcion2" id="javascript"> <label class="options"
                 for="javascript">Javascript</label>
             <input type="checkbox" class="options" name="opcion3" id="php"> <label class="options" for="php">Php</label>
-            <input type="checkbox" name="opcion4" id="Todas"> <label class="options"
+            <input type="checkbox" class="options" name="opcion4" id="Todas"> <label class="options"
                 for="Todas">Todas<span style="color: red; font-weight:bolder">(ME GUSTAN LOS PROBLEMAS)</span></label>
         </div>
 
@@ -46,10 +48,33 @@
         </div>
 
     </form>
-    </div>
-<script src="scripts.js"></script>
+
+    <script>
+
+        function checkboxControl() {
+            if (document.getElementById("checkbox").checked) {
+                document.getElementById("submit").disabled = false;
+            } else {
+                document.getElementById("submit").disabled = true;
+            }
+        }
+
+        function opciones() {
+
+            if (document.getElementById("Todas").checked) {
+
+                document.getElementById("html").checked = true;
+                document.getElementById("javascript").checked = true;
+                document.getElementById("php").checked = true;
+                alert("Has seleccionado todas las opciones");
+
+            }
+        }
+
+    </script>
+
     <footer>
-        <div id="footer"></div>
+        <h3>&#169 Esto es un footer hecho por Cesar ;)</h3>
     </footer>
 
 </body>
