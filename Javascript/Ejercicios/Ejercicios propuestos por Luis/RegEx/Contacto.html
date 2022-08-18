@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 18-7-22</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -21,14 +22,18 @@
 
     <h1>Esto es la pagina de Contacto</h1>
 
-    <form>
+    <form id="form">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br>
         <label for="apellidos">Apellidos:</label><br>
-        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+        <input type="text" id="apellido1" name="apellido1" placeholder="Apellido 1" required>
+        <input type="text" id="apellido2" name="apellido2" placeholder="Apellido 2"><br><br>
+
+        <label for="dni">Introduce tu DNI</label><br>
+        <input type="text" id="dni" name="dni" placeholder="DNI" required><br><br>
 
         <label for="mail">E-Mail</label><br>
-        <input type="email" name="mail" id="mail"><br><br>
+        <input type="email" name="mail" id="mail" placeholder="e-mail"><br><br>
 
         <div onclick="opciones()">
             <label for="options">Marca las opciones que quieras:</label><br>
@@ -49,7 +54,7 @@
 
     </form>
 
-    <script>
+    <!--<script>
 
         function checkboxControl() {
             if (document.getElementById("checkbox").checked) {
@@ -71,7 +76,7 @@
             }
         }
 
-    </script>
+    </script>-->
 
     <footer>
         <h3>&#169 Esto es un footer hecho por Cesar ;)</h3>
