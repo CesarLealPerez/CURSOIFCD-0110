@@ -18,14 +18,15 @@ function opciones() {
     }
 }
 
-let formulario = document.getElementById("dni");
+let formulario = document.getElementById("form");
 
 formulario.onsubmit = function (e) {
     e.preventDefault();
     const formData = new FormData(e.target);
+    console.log(formData);
     const datosForm = Object.fromEntries(formData);
     const validaDNI = /^[0-9]{8}[-]{1}[aA-zZ]{1}$/;
-    const datosDNI = datosForm.DNI || false;
+    const datosDNI = datosForm.dni || false;
     if (!datosDNI || !validaDNI.test(datosDNI)) {
         alert("El DNI no es válido");
         location.reload();
